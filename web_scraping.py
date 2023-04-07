@@ -57,4 +57,9 @@ for i in range(len(news_data['Link'])):
 
 news_data['Abstract'] = abstract
 
-news_data.to_excel('principais_noticias.xlsx')
+try:
+    news_data.to_excel('C:/Users/Igor/Desktop/assurance_news/principais_noticias.xlsx')
+
+except:
+    print('VOCE ESTÁ NA BRB SEGUROS')
+    # news_data.to_excel('principais_noticias.xlsx') brb seguros
