@@ -1,6 +1,6 @@
 
 # WEB SCRAPING PARA O BUSCAR AS PRINCIPAIS NOTÍCIAS NO SITE REVISTA APÓLICE
-
+import os
 import pandas as pd
 import numpy as np
 import requests
@@ -57,9 +57,8 @@ for i in range(len(news_data['Link'])):
 
 news_data['Abstract'] = abstract
 
-try:
+if os.path.exists('C:/Users/Igor/Desktop/assurance_news'): 
     news_data.to_excel('C:/Users/Igor/Desktop/assurance_news/principais_noticias.xlsx')
 
-except:
-    print('VOCE ESTÁ NA BRB SEGUROS')
-    # news_data.to_excel('principais_noticias.xlsx') brb seguros
+else:
+    news_data.to_excel('C:/Users/u00378/Desktop/assurance_news/principais_noticias.xlsx')
